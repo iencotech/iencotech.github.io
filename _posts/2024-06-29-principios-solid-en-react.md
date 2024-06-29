@@ -43,7 +43,7 @@ El principio de responsabilidad única (SRP) pareciera dar a entender que
 una función debería hacer una sola cosa. Si bien esto es una buen práctica,
 el tío Bob explica que SRP no se refiere a eso. La definición que el da es:
 un módulo debería tener una sola razón para cambiar, o siendo más precisos,
-un módulo debería ser responsable a un solo actor. En este contexto un actor
+**un módulo debería ser responsable a un solo actor**. En este contexto un actor
 es una persona o un grupo de personas que piden cambios en el software.
 
 Si bien Bob da un ejemplo usando OOP (más aplicable a backend), considerar 
@@ -343,9 +343,9 @@ export function HumanResourcesPersonsList() {
 
 El principio de abierto-cerrado (OCP) dice que un módulo debería estar
 abierto a la extensión pero cerrado a la modificación. Dicho de otra
-manera, el comportamiento de un módulo debería ser extensible, si tener
-que modificarlo. Este es un principio muy profundo y hay diferentes
-maneras de aplicarlo.
+manera, el
+**comportamiento de un módulo debería ser extensible, si tener que modificarlo**.
+Este es un principio muy profundo y hay diferentes maneras de aplicarlo.
 
 ### OCP en React
 
@@ -570,8 +570,9 @@ modal de confirmación, el nombre de la persona está en **bold** (negrita):
 El principio de sustitución de Liskov lleva el nombre de su autora,
 Barbara Liskov.
 Este principio está fuertemente basado en la Programación Orientada a Objetos
-(OOP), dice que los objetos de subtipos deberían ser sustituibles por objetos
-de supertipos. Estamos hablanado de la herencia en la OOP donde hay clases
+(OOP), dice que los
+**objetos de subtipos deberían ser sustituibles por objetos de supertipos**.
+Estamos hablando de la herencia en la OOP donde hay clases
 padre (super tipo) y clases hija (subtipos) que heredan métodos y propiedades
 de su padre. Entonces, el principio podría explicarse como que si una clase B
 extiende una clase A, entonces deberíamos poder utilizar B en cualquier lugar
@@ -683,8 +684,8 @@ la funcionalidad de la aplicación.
 
 ## Interface Segregation Principle (ISP)
 
-El principio de segregación de la interfaz dice que un módulo de software no
-debería depender de interfaces que no utiliza.
+El principio de segregación de la interfaz dice que
+**un módulo de software no debería depender de interfaces que no utiliza**.
 
 Para entender la idea veamos un ejemplo de backend con OOP. Notemos las
 siguientes tres clases de servicio: uno para generar reportes de usuario,
@@ -931,7 +932,7 @@ al API para traer la lista de usuarios.
 
 Aplicando el principio de segregación de la interfaz, podemos separar el hook
 que tenía una interfaz más amplia o general, en dos diferentes hooks con
-intefaces más específicas: uno para obtener los usuarios del API y otro para
+interfaces más específicas: uno para obtener los usuarios del API y otro para
 administrar usuarios (crear o eliminarlos):
 
 ```typescript
@@ -1101,7 +1102,7 @@ en este caso una interfaz `IPhotoRepository` que define un contrato.
 
 Ahora `PhotoService` depende de esa interfaz y no de la implementación. Por su
 parte, `PhotoRepository` implementa ese contrato. Ahora el sistema es más
-flexible porque cuando necesite cambiar `PhotoRepository`, mientras resepete
+flexible porque cuando necesite cambiar `PhotoRepository`, mientras respete
 la interfaz (que sirve de contrato) no tendría que haber problemas de
 compatibilidad.
 
@@ -1579,3 +1580,6 @@ En la programación siempre hay varias maneras de hacer las cosas bien. Estos
 principios están basados primeramente en la Programación Orientada a Objetos,
 pero las ideas se pueden aplicar a la programación funcional y a React, incluso
 en el Frontend.
+
+Aquí puedes acceder al código que se explica en este artículo:
+[iencotech/react-solid](https://github.com/iencotech/react-solid).
